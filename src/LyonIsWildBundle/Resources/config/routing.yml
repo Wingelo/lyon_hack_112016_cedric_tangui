@@ -1,7 +1,3 @@
-lyon_is_wild_category:
-    resource: "@LyonIsWildBundle/Resources/config/routing/category.yml"
-    prefix:   /category
-
 lyon_is_wild_place:
     resource: "@LyonIsWildBundle/Resources/config/routing/place.yml"
     prefix:   /place

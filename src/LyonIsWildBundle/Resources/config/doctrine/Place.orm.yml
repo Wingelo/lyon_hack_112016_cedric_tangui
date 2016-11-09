@@ -35,6 +35,9 @@ LyonIsWildBundle\Entity\Place:
         fecebook:
             type: string
             length: 255
+        price:
+            type: string
+            length: 255
         longitude:
             type: string
             length: 255

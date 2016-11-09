@@ -32,6 +32,7 @@ class DefaultController extends Controller
                 $siteData->setEmail($site["properties"]["email"]);
                 $siteData->setWebsite($site["properties"]["siteweb"]);
                 $siteData->setFecebook($site["properties"]["facebook"]);
+                $siteData->setPrice($site["properties"]["tarifsmax"]);
                 $siteData->setLongitude($site["geometry"]["coordinates"][0]);
                 $siteData->setLatitude($site["geometry"]["coordinates"][1]);
                 $em->persist($siteData);
