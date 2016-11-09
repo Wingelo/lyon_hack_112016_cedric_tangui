@@ -1,3 +1,8 @@
-lyon_is_wild_homepage:
-    path:     /
-    defaults: { _controller: LyonIsWildBundle:Default:index }
+lyon_is_wild_place:
+    resource: "@LyonIsWildBundle/Resources/config/routing/place.yml"
+    prefix:   /place
+
+lyon_front:
+    resource: "@LyonIsWildBundle/Resources/config/routing/front.yml"
+    prefix:   /
+

@@ -1,0 +1,9 @@
+front_index:
+    path:     /
+    defaults: { _controller: "LyonIsWildBundle:Default:index" }
+    methods: GET
+
+load_index:
+    path:     /load/sql/data
+    defaults: { _controller: "LyonIsWildBundle:Default:Load" }
+    methods: [GET, POST]
