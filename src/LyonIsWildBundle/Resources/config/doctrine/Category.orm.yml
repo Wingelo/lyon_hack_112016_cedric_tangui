@@ -9,7 +9,7 @@ LyonIsWildBundle\Entity\Category:
             generator:
                 strategy: AUTO
     fields:
-        category:
+        name:
             type: string
             length: 255
     lifecycleCallbacks: {  }

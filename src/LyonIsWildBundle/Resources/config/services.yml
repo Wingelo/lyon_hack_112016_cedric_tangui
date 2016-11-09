@@ -2,3 +2,7 @@ services:
 #    lyon_is_wild.example:
 #        class: LyonIsWildBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    lyoniswild.category_generator:
+        class:        LyonIsWildBundle\Controller\DefaultController
+        arguments: [category]

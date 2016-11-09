@@ -1,0 +1,44 @@
+LyonIsWildBundle\Entity\Place:
+    type: entity
+    table: null
+    repositoryClass: LyonIsWildBundle\Repository\PlaceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        type:
+            type: string
+            length: 255
+        name:
+            type: string
+            length: 255
+        address:
+            type: text
+        postal:
+            type: string
+            length: 255
+        city:
+            type: string
+            length: 255
+        phonenumber:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        website:
+            type: string
+            length: 255
+        fecebook:
+            type: string
+            length: 255
+        longitude:
+            type: string
+            length: 255
+        latitude:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
