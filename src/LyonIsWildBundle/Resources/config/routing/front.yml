@@ -1,0 +1,4 @@
+lyon_index:
+    path:     /
+    defaults: { _controller: "LyonIsWildBundle:Front:index" }
+    methods: GET

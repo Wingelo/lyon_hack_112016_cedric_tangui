@@ -10,4 +10,24 @@ namespace LyonIsWildBundle\Repository;
  */
 class PlaceRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getParcoursPatrimoineCulturel(){
+/*
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p FROM LyonIsWildBundle:Place p WHERE p.type = "PATRIMOINE_CULTUREL" AND p.price <= "20" ORDER BY p.price DESC'
+            )
+            ->getResult();*/
+
+        $query = $this->createQueryBuilder('p')
+            ->where('p.type = ?1')
+            ->setParameter(1, $type)
+            ->andWhere('p.price between 5 and 10')
+            ->orderBy('p.price', 'DESC')
+
+
+            ->getQuery();
+
+        return $query->getResult();
+    }
+
 }

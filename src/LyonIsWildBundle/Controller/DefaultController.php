@@ -36,11 +36,8 @@ class DefaultController extends Controller
                 $siteData->setLongitude($site["geometry"]["coordinates"][0]);
                 $siteData->setLatitude($site["geometry"]["coordinates"][1]);
                 $em->persist($siteData);
-
         }
         $em->flush();
-
-
         return $em;
 
 

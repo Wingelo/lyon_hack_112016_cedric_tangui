@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% for parcour in parcours %}
+        <div>
+    {{ parcour.name }}
+    {{ parcour.postal }}
+        {{ parcour.price }}euros
+        </div>
+    {% endfor %}
+
+{% endblock %}
