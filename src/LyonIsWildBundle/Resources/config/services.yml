@@ -6,3 +6,7 @@ services:
         class: LyonIsWildBundle\Form\RegistrationType
         tags:
             - { name: form.type, alias: lyoniswild_user_registration }
+
+  lyoniswild.category_generator:
+        class:        LyonIsWildBundle\Controller\DefaultController
+        arguments: [category]

@@ -19,8 +19,8 @@ class PlaceRepository extends \Doctrine\ORM\EntityRepository
             ->getResult();*/
 
         $query = $this->createQueryBuilder('p')
-            ->where('p.type = ?1')
-            ->setParameter(1, $type)
+            ->where('p.type = :type')
+            ->setParameter('type', 'PATRIMOINE_CULTUREL')
             ->andWhere('p.price between 5 and 10')
             ->orderBy('p.price', 'DESC')
 
