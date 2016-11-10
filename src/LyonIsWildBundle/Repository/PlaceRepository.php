@@ -26,7 +26,7 @@ class PlaceRepository extends \Doctrine\ORM\EntityRepository
         return $query->getResult();
     }
 
-    public function getParcoursRestauration(){
+    public function getParcoursRestaurations(){
 
         $query = $this->createQueryBuilder('p')
             ->where('p.type = :type')
@@ -56,7 +56,7 @@ class PlaceRepository extends \Doctrine\ORM\EntityRepository
         return $query->getResult();
     }
 
-    public function getParcoursRestautationCher(){
+    public function getParcoursRestaurationsLuxe(){
 
         $query = $this->createQueryBuilder('p')
             ->where('p.type = :type')

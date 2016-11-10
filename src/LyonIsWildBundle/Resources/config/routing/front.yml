@@ -2,3 +2,24 @@ lyon_index:
     path:     /
     defaults: { _controller: "LyonIsWildBundle:Front:index" }
     methods: GET
+
+lyon_parcours_aleatoire:
+    path: /aleatoire
+    defaults: { _controller: "LyonIsWildBundle:Front:ParcoursAleatoire"}
+
+lyon_parcours_culturel:
+    path: /culturel
+    defaults: { _controller: "LyonIsWildBundle:Front:ParcoursPatrimoineCulturel"}
+
+lyon_parcours_restaurations:
+    path: /restaurations
+    defaults: { _controller: "LyonIsWildBundle:Front:ParcoursRestaurations"}
+
+lyon_parcours_restaurations_luxe:
+    path: /restaurationsluxe
+    defaults: { _controller: "LyonIsWildBundle:Front:ParcoursRestaurationsLuxe"}
+
+lyon_parcours_equipements:
+    path: /equipements
+    defaults: { _controller: "LyonIsWildBundle:Front:ParcoursEquipements"}
+

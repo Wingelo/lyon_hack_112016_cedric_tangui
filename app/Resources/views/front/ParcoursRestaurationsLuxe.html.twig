@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	{% for parcourpat in ParcoursRestaurationsLuxe%}
+		<div>
+			{{ parcourpat.name }}
+			{{ parcourpat.postal }}
+			{{ parcourpat.price }}
+		</div>
+	{% endfor %}
+{% endblock %}
