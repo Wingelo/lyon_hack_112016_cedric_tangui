@@ -1,0 +1,27 @@
+LyonIsWildBundle\Entity\Parcours:
+    type: entity
+    table: null
+    repositoryClass: LyonIsWildBundle\Repository\ParcoursRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        parcours:
+            type: string
+            length: 255
+        type:
+            type: string
+            length: 255
+        id1:
+            type: integer
+        id2:
+            type: integer
+        id3:
+            type: integer
+
+
+
+    lifecycleCallbacks: {  }
