@@ -1,3 +1,4 @@
 lyon_is_wild_homepage:
     path:     /
     defaults: { _controller: LyonIsWildBundle:Default:index }
+

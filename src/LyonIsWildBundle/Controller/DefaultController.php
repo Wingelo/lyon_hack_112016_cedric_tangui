@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('LyonIsWildBundle:Default:index.html.twig');
     }
+    public function register_contentAction()
+	{
+		return $this->render('LyonIsWildBundle:Registration:register_content.html.twig');
+	}
 }

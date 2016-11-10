@@ -1,0 +1,26 @@
+LyonIsWildBundle\Entity\User:
+    type: entity
+    table: fos_user
+    repositoryClass: LyonIsWildBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        firstname:
+            type: string
+            lenght: 255
+        lastname:
+            type: string
+            lenght: 255
+        pays:
+            type: string
+            lenght: 255
+        city:
+            type: string
+            lenght: 255
+
+
+
+    lifecycleCallbacks: {  }

@@ -2,3 +2,13 @@ lyon_is_wild:
     resource: "@LyonIsWildBundle/Resources/config/routing.yml"
     prefix:   /
 
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+register:
+    path:     /register
+    defaults: { _controller: FOS:Registration:register }
+
+login:
+    path:    /login
+    defaults: { _controller: FOS:Security:login}
