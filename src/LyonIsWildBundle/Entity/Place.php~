@@ -341,4 +341,33 @@ class Place
     {
         return $this->latitude;
     }
+    /**
+     * @var string
+     */
+    private $price;
+
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     *
+     * @return Place
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
 }
