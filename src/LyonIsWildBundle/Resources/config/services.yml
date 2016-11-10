@@ -2,7 +2,11 @@ services:
 #    lyon_is_wild.example:
 #        class: LyonIsWildBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+  lyoniswilduser.form.registration:
+        class: LyonIsWildBundle\Form\RegistrationType
+        tags:
+            - { name: form.type, alias: lyoniswild_user_registration }
 
-    lyoniswild.category_generator:
+  lyoniswild.category_generator:
         class:        LyonIsWildBundle\Controller\DefaultController
         arguments: [category]

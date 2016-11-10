@@ -3,6 +3,9 @@ lyon_is_wild_place:
     prefix:   /place
 
 lyon_front:
+    resource: "@LyonIsWildBundle/Resources/config/routing/default.yml"
+    prefix:   /default
+
+lyon_parcours_front:
     resource: "@LyonIsWildBundle/Resources/config/routing/front.yml"
     prefix:   /
-

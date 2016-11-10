@@ -15,7 +15,7 @@ class FrontController extends Controller
 {
     public function indexAction(){
         $repository = $this->getDoctrine()->getRepository("LyonIsWildBundle:Place");
-        $parcoursPats = $repository->getParcoursPatrimoineCulturel();
+        $parcoursPats = $repository->getParcoursAleatoire();
 
         $parcoursRests = $repository->getParcoursRestauration();
         return $this->render('front/index.html.twig',

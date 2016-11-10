@@ -14,7 +14,7 @@ class PlaceRepository extends \Doctrine\ORM\EntityRepository
 
         $query = $this->createQueryBuilder('p')
             ->where('p.type = :type')
-            ->setParameter('type', "PATRIMOINE_CULTUREL")
+            ->setParameter('type', 'PATRIMOINE_CULTUREL')
             ->andWhere('p.price between 5 and 10')
             ->orderBy('p.price', 'DESC')
             ->andWhere('p.postal = 69005')
@@ -70,4 +70,21 @@ class PlaceRepository extends \Doctrine\ORM\EntityRepository
 
         return $query->getResult();
     }
+
+    public function getParcoursAleatoire(){
+
+    	$count = $this->createQueryBuilder('p')
+			->select('COUNT(p)')
+			->getQuery()
+			->getSingleScalarResult();
+		$query = $this->createQueryBuilder('p')
+			->setFirstResult(rand(0, $count - 3))
+			->setMaxResults(3)
+			->getQuery();
+
+
+		return $query->getResult();
+
+
+	}
 }
