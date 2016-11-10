@@ -370,4 +370,33 @@ class Place
     {
         return $this->price;
     }
+    /**
+     * @var \LyonIsWildBundle\Entity\Parcours
+     */
+    private $parcours;
+
+
+    /**
+     * Set parcours
+     *
+     * @param \LyonIsWildBundle\Entity\Parcours $parcours
+     *
+     * @return Place
+     */
+    public function setParcours(\LyonIsWildBundle\Entity\Parcours $parcours = null)
+    {
+        $this->parcours = $parcours;
+
+        return $this;
+    }
+
+    /**
+     * Get parcours
+     *
+     * @return \LyonIsWildBundle\Entity\Parcours
+     */
+    public function getParcours()
+    {
+        return $this->parcours;
+    }
 }

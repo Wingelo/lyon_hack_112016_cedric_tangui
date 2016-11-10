@@ -11,17 +11,43 @@ namespace LyonIsWildBundle\Repository;
 class PlaceRepository extends \Doctrine\ORM\EntityRepository
 {
     public function getParcoursPatrimoineCulturel(){
-/*
-        return $this->getEntityManager()
-            ->createQuery(
-                'SELECT p FROM LyonIsWildBundle:Place p WHERE p.type = "PATRIMOINE_CULTUREL" AND p.price <= "20" ORDER BY p.price DESC'
-            )
-            ->getResult();*/
 
         $query = $this->createQueryBuilder('p')
             ->where('p.type = :type')
             ->setParameter('type', 'PATRIMOINE_CULTUREL')
             ->andWhere('p.price between 5 and 10')
+            ->orderBy('p.price', 'DESC')
+            ->andWhere('p.postal = 69005')
+            ->setMaxResults(3)
+
+
+            ->getQuery();
+
+        return $query->getResult();
+    }
+
+    public function getParcoursRestauration(){
+
+        $query = $this->createQueryBuilder('p')
+            ->where('p.type = :type')
+            ->setParameter('type', "RESTAURATION")
+            ->andWhere('p.price between 10 and 30')
+            ->orderBy('p.price', 'DESC')
+            ->andWhere('p.postal = 69003')
+            ->setMaxResults(3)
+
+
+            ->getQuery();
+
+        return $query->getResult();
+    }
+
+    public function getParcoursEquipements(){
+
+        $query = $this->createQueryBuilder('p')
+            ->where('p.type = :type')
+            ->setParameter('type', "EQUIPEMENTS")
+            ->andWhere('p.price between 0 and 20')
             ->orderBy('p.price', 'DESC')
 
 
@@ -30,4 +56,35 @@ class PlaceRepository extends \Doctrine\ORM\EntityRepository
         return $query->getResult();
     }
 
+    public function getParcoursRestautationCher(){
+
+        $query = $this->createQueryBuilder('p')
+            ->where('p.type = :type')
+            ->setParameter('type', "RESTAURATION")
+            ->andWhere('p.price between 50 and 200')
+            ->orderBy('p.price', 'DESC')
+            ->setMaxResults(3)
+
+
+            ->getQuery();
+
+        return $query->getResult();
+    }
+
+    public function getParcoursAleatoire(){
+
+    	$count = $this->createQueryBuilder('p')
+			->select('COUNT(p)')
+			->getQuery()
+			->getSingleScalarResult();
+		$query = $this->createQueryBuilder('p')
+			->setFirstResult(rand(0, $count - 3))
+			->setMaxResults(3)
+			->getQuery();
+
+
+		return $query->getResult();
+
+
+	}
 }
