@@ -23,3 +23,6 @@ lyon_parcours_equipements:
     path: /equipements
     defaults: { _controller: "LyonIsWildBundle:Front:ParcoursEquipements"}
 
+lyon_parcours:
+    path: /parcours
+    defaults: { _controller: "LyonIsWildBundle:Front:Parcours"}

@@ -43,7 +43,14 @@ class FrontController extends Controller
 			array("ParcoursRestaurationsLuxe" => $parcoursRestaurationsLuxe)
 			);
 	}
+	public function IndexAction(){
 
+		return $this->render('front/index.html.twig');
+	}
+	public function ParcoursAction(){
+
+		return $this->render('front/Parcours.html.twig');
+	}
 
 
 

@@ -258,3 +258,12 @@ li
 {
 	color : #D1242A;
 }
+
+.fos_user_user_show
+{
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	border-color: rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+	padding: 15px;
+}

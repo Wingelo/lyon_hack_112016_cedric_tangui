@@ -12,3 +12,16 @@ register:
 login:
     path:    /login
     defaults: { _controller: FOS:Security:login}
+    methods: GET|POST
+
+logout:
+    path:   /logout
+
+profile:
+    path:    /profile
+    defaults: { _controller: FOS:Profile:show}
+
+edit:
+    path:    /profile/edit
+    defaults: { _controller: FOS:Profile:edit}
+
