@@ -1,0 +1,6 @@
+
+
+load_index:
+    path:     /load/sql/data
+    defaults: { _controller: "LyonIsWildBundle:Default:Load" }
+    methods: [GET, POST]

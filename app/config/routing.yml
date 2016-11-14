@@ -1,3 +1,27 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+lyon_is_wild:
+    resource: "@LyonIsWildBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+register:
+    path:     /register
+    defaults: { _controller: FOS:Registration:register }
+
+login:
+    path:    /login
+    defaults: { _controller: FOS:Security:login}
+    methods: GET|POST
+
+logout:
+    path:   /logout
+
+profile:
+    path:    /profile
+    defaults: { _controller: FOS:Profile:show}
+
+edit:
+    path:    /profile/edit
+    defaults: { _controller: FOS:Profile:edit}
+

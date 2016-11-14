@@ -1,0 +1,13 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="container fos_user_user_show">
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p>Nom: {{ user.lastname }}</p>
+    <p>Prénom: {{ user.firstname }}</p>
+    <p>Pays: {{ user.pays }}</p>
+    <p>Ville: {{ user.city }}</p>
+    <form class="login" action="" method="post">
+        <a href="{{ path('edit') }}"><input  title="" type="url" class="btn btn-success btn-sm" value="Editer tes informations" /></a>
+    </form>
+</div>
